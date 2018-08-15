@@ -1,0 +1,18 @@
+<!-- part-of-speech tagging -->
+<configuration>
+    <tsv>
+        <column index="1" field="form"/>
+        <!--column index="2" field="lemma"/>
+        <column index="3" field="pos"/-->
+    </tsv>
+
+    <lexica>
+        <ambiguity_classes field="word_form_simplified_lowercase">lexica/en-ambiguity-classes-simplified-lowercase.xz</ambiguity_classes>
+        <word_clusters field="word_form_simplified_lowercase">lexica/en-brown-clusters-simplified-lowercase.xz</word_clusters>
+    </lexica>
+
+    <models>
+        <pos>models/CRAFT.POS.model.xz</pos>
+        <dep>models/CRAFT.DEP.model.xz</dep>
+    </models>
+</configuration>
