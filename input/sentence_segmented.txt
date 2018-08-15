@@ -1,0 +1,3 @@
+Induction of tyrosine phosphorylation and T-cell activation by vanadate peroxide, an inhibitor of protein tyrosine phosphatases. 
+Rapid tyrosine phosphorylation of key cellular proteins is a crucial event in the transduction of activation signals to T-lymphocytes. 
+The regulatory role of protein tyrosine phosphatases (PTPases) in this process was explored by studying the effects of a powerful PTPase inhibitor, vanadate peroxide (pervanadate), on the activation cascade of Jurkat human leukaemic T-cells.
