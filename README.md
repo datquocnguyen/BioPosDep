@@ -94,7 +94,7 @@ More documentation to come!
 	  url       = {http://www.aclweb.org/anthology/N16-1031}
 	}
 	
-	% NLP4J dependency parser
+	% NLP4J parser
 	@InProceedings{choi-mccallum:2013:ACL2013,
 	  author    = {Choi, Jinho D.  and  McCallum, Andrew},
 	  title     = {Transition-based Dependency Parsing with Selectional Branching},
@@ -107,7 +107,7 @@ More documentation to come!
 	  url       = {http://www.aclweb.org/anthology/P13-1104}
 	}
 	
-	% For Biaffine 
+	% Biaffine parser
 	@InProceedings{dozat-qi-manning:2017:K17-3,
 	  author    = {Dozat, Timothy  and  Qi, Peng  and  Manning, Christopher D.},
 	  title     = {Stanford's Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task},
@@ -120,7 +120,7 @@ More documentation to come!
 	  url       = {http://www.aclweb.org/anthology/K17-3002}
 	}
 	
-	% For jPTDP
+	% jPTDP parser
 	@InProceedings{nguyen-dras-johnson:2017:K17-3,
 	  author    = {Nguyen, Dat Quoc  and  Dras, Mark  and  Johnson, Mark},
 	  title     = {A Novel Neural Network Model for Joint POS Tagging and Graph-based Dependency Parsing},
@@ -131,4 +131,25 @@ More documentation to come!
 	  publisher = {Association for Computational Linguistics},
 	  pages     = {134--142},
 	  url       = {http://www.aclweb.org/anthology/K17-3014}
+	}
+
+	% GENIA
+	@article{btg1023,
+	author = {Kim, J.-D. and Ohta, T. and Tateisi, Y. and Tsujii, J.},
+	title = {{GENIA corpus---a semantically annotated corpus for bio-textmining}},
+	journal = {Bioinformatics},
+	volume = {19},
+	pages = {i180-i182},
+	year = {2003}
+	}
+
+	% CRAFT
+	@Article{Verspoor2012,
+	author="Verspoor, Karin and Cohen, Kevin Bretonnel and Lanfranchi, Arrick and Warner, Colin and Johnson, Helen L. and Roeder, Christophe and Choi, Jinho D. and Funk, Christopher and Malenkiy, Yuriy and Eckert, Miriam and Xue, Nianwen and Baumgartner, William A. and Bada, Michael and Palmer, Martha and Hunter, Lawrence E.",
+	title="A corpus of full-text journal articles is a robust evaluation tool for revealing differences in performance of biomedical natural language processing tools",
+	journal="BMC Bioinformatics",
+	year="2012",
+	volume="13",
+	number="1",
+	pages="207"
 	}
