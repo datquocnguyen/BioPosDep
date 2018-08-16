@@ -4,7 +4,7 @@ import sys
 
 #Convert word-segmented corpus into 10-column format for dependency parsing
 def convert(inputFilePath):
-    writer = open(inputFilePath + ".conll", "w")
+    writer = open(inputFilePath + ".column", "w")
     lines = open(inputFilePath, "r").readlines()
     for line in lines:
         tok = line.strip().split()

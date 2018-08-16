@@ -2,7 +2,7 @@
 import os
 import sys
 
-#Convert NLP4J's output into CoNLL's 10-column format
+#Convert NLP4J's 9-column output into CoNLL's 10-column format
 def convert(inputFile):
     writer = open(inputFile + ".conll", "w")
     for line in open(inputFile, "r").readlines():
@@ -12,6 +12,8 @@ def convert(inputFile):
         else:
             eles[4] = "_"
             eles.insert(4, eles[3])
+            eles[8] = "_"
+            eles[9] = "_"
             writer.write("\t".join(eles) + "\n")
 
     writer.close()
