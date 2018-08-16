@@ -19,7 +19,7 @@ The first step is to perform POS tagging and dependency parsing using pre-traine
 
 ### Perform biomedical POS tagging and dependency parsing using pre-trained NLP4J models 
 
-##### Installation
+#### Installation
 
 Users can download pre-trained NLP4J models from [https://github.com/datquocnguyen/BioNLP/archive/master.zip](https://github.com/datquocnguyen/BioNLP/archive/master.zip) (70MB) or clone these models using `git`:
     
@@ -27,7 +27,7 @@ Users can download pre-trained NLP4J models from [https://github.com/datquocnguy
     
 To run the models, it is expected that `Java` is already set to run in command line or terminal.
 
-##### Command line (See [HERE](https://emorynlp.github.io/nlp4j/quickstart/decode.html) for more details)
+#### Command line 
     
     # Using models trained on GENIA
     BioNLP/NLP4J$ bin/nlpdecode -c config-GENIA.xml -i <filepath> -format <string> [-ie <string> -oe <string>]
@@ -64,8 +64,20 @@ To run the models, it is expected that `Java` is already set to run in command l
 	BioNLP/NLP4J$ bin/nlpdecode -c config-CRAFT.xml -i ../data/tokenized_sentence_segmented.txt.column -format tsv -oe craft
 	# Here we expect word forms at the second column (i.e. column index of 1). 
 	# Adjust <column index="1" field="form"/> in config-GENIA.xml and config-CRAFT.xml if users already have a column-formated corpus with a different index of the word form column.
+
+From the examples above, output files `.genia` and `.craft ` are generated in folder `data`, containing POS and dependency annotations.  Note that these output files are in a 9-column format. To further apply other pre-trained dependency parsing models, they must be converted to 10-column format:
+
+	BioNLP$ python convert_NLP4J_to_CoNLL.py <NLP4J_output_filepath>
+
+##### Examples
 	
+	BioNLP$ python convert_NLP4J_to_CoNLL.py data/raw.txt.genia
+	BioNLP$ python convert_NLP4J_to_CoNLL.py data/raw.txt.craft
+
+will generate two 10-column output files `raw.txt.genia.conll` and `raw.txt.craft.conll` in folder `data`.
 	
+### Using pre-trained Stanford Biaffine models 
+More documentation to come!
 
 # References
 	
