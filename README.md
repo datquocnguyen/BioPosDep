@@ -15,7 +15,7 @@ The pre-trained models are **free** for non-commercial use and distributed under
 
 # Usage 
 
-The first step is to perform POS tagging and dependency parsing using pre-trained [NLP4J](https://emorynlp.github.io/nlp4j/) models. Then other pre-trained dependency parsing models might be applied on top of the output of [NLP4J](https://emorynlp.github.io/nlp4j/). 
+The first step is to perform POS tagging and dependency parsing using pre-trained [NLP4J](https://emorynlp.github.io/nlp4j/) models. Then other pre-trained dependency parsing models might be applied on top of the output of NLP4J. 
 
 ### Perform biomedical POS tagging and dependency parsing using pre-trained NLP4J models 
 
@@ -59,25 +59,70 @@ To run the models, it is expected that `Java` is already set to run in command l
 	BioNLP/NLP4J$ bin/nlpdecode -c config-CRAFT.xml -i ../data/sentence_segmented.txt -format line -oe craft
 
 	# For a "pre-processed" tokenized and sentence-segmented corpus
+	# Convert into a column-based format
 	BioNLP/NLP4J$ python ../get_ColumnFormat.py ../data/tokenized_sentence_segmented.txt
+	# Apply pre-trained models using "tsv"
 	BioNLP/NLP4J$ bin/nlpdecode -c config-GENIA.xml -i ../data/tokenized_sentence_segmented.txt.column -format tsv -oe genia
 	BioNLP/NLP4J$ bin/nlpdecode -c config-CRAFT.xml -i ../data/tokenized_sentence_segmented.txt.column -format tsv -oe craft
 	# Here we expect word forms at the second column (i.e. column index of 1). 
 	# Adjust <column index="1" field="form"/> in config-GENIA.xml and config-CRAFT.xml if users already have a column-formated corpus with a different index of the word form column.
 
-From the examples above, output files `.genia` and `.craft ` are generated in folder `data`, containing POS and dependency annotations.  Note that these output files are in a 9-column format. To further apply other pre-trained dependency parsing models, they must be converted to 10-column format:
+From the examples above, output files `.genia` and `.craft ` are generated in folder `data`, containing POS and dependency annotations.  
 
+
+##### Note
+Those NLP4J output files are in a 9-column format. To further apply other pre-trained dependency parsing models, they must be converted to 10-column format:
+
+	# Command line
 	BioNLP$ python convert_NLP4J_to_CoNLL.py <NLP4J_output_filepath>
 
-##### Examples
-	
+	# Examples
 	BioNLP$ python convert_NLP4J_to_CoNLL.py data/raw.txt.genia
 	BioNLP$ python convert_NLP4J_to_CoNLL.py data/raw.txt.craft
 
-will generate two 10-column output files `raw.txt.genia.conll` and `raw.txt.craft.conll` in folder `data`.
+Two 10-column output files `raw.txt.genia.conll` and `raw.txt.craft.conll` are generated in folder `data`, which will be used as inputs for the other pre-trained models.
 	
-### Using pre-trained Stanford Biaffine models 
-More documentation to come!
+### Using pre-trained Stanford [Biaffine](https://github.com/tdozat/Parser-v2) parsing models 
+
+#### Installation
+
+	# Install prerequisite packages  
+	BioNLP/StanfordBiaffineParser-v2$ virtualenv .TF1_0
+	BioNLP/StanfordBiaffineParser-v2$ source .TF1_0/bin/activate
+	BioNLP/StanfordBiaffineParser-v2$ pip install tensorflow==1.0
+	BioNLP/StanfordBiaffineParser-v2$ pip install numpy==1.11.0
+	BioNLP/StanfordBiaffineParser-v2$ pip install scipy==1.0.0
+	BioNLP/StanfordBiaffineParser-v2$ pip install matplotlib==2.1.2
+	BioNLP/StanfordBiaffineParser-v2$ pip install backports.lzma
+
+ - Download pre-trained Biaffine models from [HERE](https://drive.google.com/file/d/18IYSJEV0uwbg468lFXejS0Wyw2_8Pjfa/view?usp=sharing). 
+ - Unzip the downloaded file `Pre-trained-Biaffine-v2.zip`, then copy/move folder `models` and file `PubMed-shuffle-win2-500Kwords.txt` into folder `BioNLP/StanfordBiaffineParser-v2`.
+
+
+
+#### Command line 
+
+	# Using model trained on GENIA
+	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/GENIA parse <filepath>
+	
+	# Using model trained on CRAFT
+	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/CRAFT parse <filepath>
+
+	# Parsed files are by default saved in the model directory with the same name as the original file.
+	# More command line options can be found at https://github.com/tdozat/Parser-v2
+
+#### Examples
+
+	# Activate TensorFlow 1.0
+	BioNLP/StanfordBiaffineParser-v2$ source .TF1_0/bin/activate
+	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/GENIA parse raw.txt.genia.conll
+	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/CRAFT parse raw.txt.craft.conll
+	
+Two output  parsed files `raw.txt.genia.conll` and `raw.txt.craft.conll` are generated in folders  `models/GENIA` and `models/CRAFT`, respectively.
+	
+### Using pre-trained jPTDP models 
+
+See [https://github.com/datquocnguyen/jPTDP](https://github.com/datquocnguyen/jPTDP) for more details. More documentation to come!
 
 # References
 	
