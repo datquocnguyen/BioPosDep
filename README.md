@@ -61,11 +61,12 @@ To run the models, it is expected that `Java` is already set to run in command l
 	# For a "pre-processed" tokenized and sentence-segmented corpus
 	# Convert into a column-based format
 	BioNLP/NLP4J$ python ../get_ColumnFormat.py ../data/tokenized_sentence_segmented.txt
-	# Apply pre-trained models using "tsv"
+
+	# Apply pre-trained models using "tsv". Here we expect word forms at the second column (i.e. column index of 1). 
+	# Adjust <column index="1" field="form"/> in config-GENIA.xml and config-CRAFT.xml if users already have a column-formated corpus with a different index of the word form column.
 	BioNLP/NLP4J$ bin/nlpdecode -c config-GENIA.xml -i ../data/tokenized_sentence_segmented.txt.column -format tsv -oe genia
 	BioNLP/NLP4J$ bin/nlpdecode -c config-CRAFT.xml -i ../data/tokenized_sentence_segmented.txt.column -format tsv -oe craft
-	# Here we expect word forms at the second column (i.e. column index of 1). 
-	# Adjust <column index="1" field="form"/> in config-GENIA.xml and config-CRAFT.xml if users already have a column-formated corpus with a different index of the word form column.
+	
 
 From the examples above, output files `.genia` and `.craft ` are generated in folder `data`, containing POS and dependency annotations.  
 
