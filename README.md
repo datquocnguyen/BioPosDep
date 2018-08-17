@@ -59,11 +59,10 @@ To run the models, it is expected that `Java` is already set to run in command l
 	BioNLP/NLP4J$ bin/nlpdecode -c config-CRAFT.xml -i ../data/sentence_segmented.txt -format line -oe craft
 
 	# For a "pre-processed" tokenized and sentence-segmented corpus
-	# Convert into a column-based format
+		# Convert into a column-based format
 	BioNLP/NLP4J$ python ../get_ColumnFormat.py ../data/tokenized_sentence_segmented.txt
-
-	# Apply pre-trained models using "tsv". Here we expect word forms at the second column (i.e. column index of 1). 
-	# Adjust <column index="1" field="form"/> in config-GENIA.xml and config-CRAFT.xml if users already have a column-formated corpus with a different index of the word form column.
+		# Apply pre-trained models using "tsv". Here we expect word forms at the second column (i.e. column index of 1). 
+		# Adjust <column index="1" field="form"/> in config-GENIA.xml and config-CRAFT.xml if users already have a column-formated corpus with a different index of the word form column.
 	BioNLP/NLP4J$ bin/nlpdecode -c config-GENIA.xml -i ../data/tokenized_sentence_segmented.txt.column -format tsv -oe genia
 	BioNLP/NLP4J$ bin/nlpdecode -c config-CRAFT.xml -i ../data/tokenized_sentence_segmented.txt.column -format tsv -oe craft
 	
@@ -114,7 +113,7 @@ Two 10-column output files `raw.txt.genia.conll` and `raw.txt.craft.conll` are g
 
 #### Examples
 
-	# Activate TensorFlow 1.0
+	# Activate TensorFlow 1.0 before running pre-trained models:
 	BioNLP/StanfordBiaffineParser-v2$ source .TF1_0/bin/activate
 	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/GENIA parse ../data/raw.txt.genia.conll
 	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/CRAFT parse ../data/raw.txt.craft.conll
