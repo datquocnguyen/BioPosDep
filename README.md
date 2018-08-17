@@ -116,8 +116,8 @@ Two 10-column output files `raw.txt.genia.conll` and `raw.txt.craft.conll` are g
 
 	# Activate TensorFlow 1.0
 	BioNLP/StanfordBiaffineParser-v2$ source .TF1_0/bin/activate
-	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/GENIA parse raw.txt.genia.conll
-	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/CRAFT parse raw.txt.craft.conll
+	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/GENIA parse ../data/raw.txt.genia.conll
+	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/CRAFT parse ../data/raw.txt.craft.conll
 	
 Two output  parsed files `raw.txt.genia.conll` and `raw.txt.craft.conll` are generated in folders  `models/GENIA` and `models/CRAFT`, respectively.
 	
