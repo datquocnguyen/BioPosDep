@@ -109,7 +109,6 @@ Two 10-column output files `raw.txt.genia.conll` and `raw.txt.craft.conll` are g
 	BioNLP/StanfordBiaffineParser-v2$ python main.py --save_dir models/CRAFT parse <filepath>
 
 	# Parsed files are by default saved in the model directory with the same name as the original file.
-	# More command line options can be found at https://github.com/tdozat/Parser-v2
 
 #### Examples
 
