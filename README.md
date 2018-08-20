@@ -11,7 +11,7 @@ Pre-trained models for biomedical POS tagging and dependency parsing are trained
         url = {https://arxiv.org/abs/1808.03731}
     }
     
-The pre-trained models are **free** for non-commercial use and distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International ([CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/)) License. 
+Our pre-trained models are **free** for non-commercial use and distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International ([CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/)) License. 
 
 # Usage 
 
@@ -122,79 +122,4 @@ Two output  parsed files `raw.txt.genia.conll` and `raw.txt.craft.conll` are gen
 	
 ### Using pre-trained jPTDP models 
 
-See [https://github.com/datquocnguyen/jPTDP](https://github.com/datquocnguyen/jPTDP) for more details. More documentation to come!
-
-# References
-	
-	% NLP4J POS tagger
-	@InProceedings{choi:2016:N16-1,
-	  author    = {Choi, Jinho D.},
-	  title     = {Dynamic Feature Induction: The Last Gist to the State-of-the-Art},
-	  booktitle = {Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
-	  month     = {June},
-	  year      = {2016},
-	  address   = {San Diego, California},
-	  publisher = {Association for Computational Linguistics},
-	  pages     = {271--281},
-	  url       = {http://www.aclweb.org/anthology/N16-1031}
-	}
-	
-	% NLP4J parser
-	@InProceedings{choi-mccallum:2013:ACL2013,
-	  author    = {Choi, Jinho D.  and  McCallum, Andrew},
-	  title     = {Transition-based Dependency Parsing with Selectional Branching},
-	  booktitle = {Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
-	  month     = {August},
-	  year      = {2013},
-	  address   = {Sofia, Bulgaria},
-	  publisher = {Association for Computational Linguistics},
-	  pages     = {1052--1062},
-	  url       = {http://www.aclweb.org/anthology/P13-1104}
-	}
-	
-	% Biaffine parser
-	@InProceedings{dozat-qi-manning:2017:K17-3,
-	  author    = {Dozat, Timothy  and  Qi, Peng  and  Manning, Christopher D.},
-	  title     = {Stanford's Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task},
-	  booktitle = {Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies},
-	  month     = {August},
-	  year      = {2017},
-	  address   = {Vancouver, Canada},
-	  publisher = {Association for Computational Linguistics},
-	  pages     = {20--30},
-	  url       = {http://www.aclweb.org/anthology/K17-3002}
-	}
-	
-	% jPTDP parser
-	@InProceedings{nguyen-dras-johnson:2017:K17-3,
-	  author    = {Nguyen, Dat Quoc  and  Dras, Mark  and  Johnson, Mark},
-	  title     = {A Novel Neural Network Model for Joint POS Tagging and Graph-based Dependency Parsing},
-	  booktitle = {Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies},
-	  month     = {August},
-	  year      = {2017},
-	  address   = {Vancouver, Canada},
-	  publisher = {Association for Computational Linguistics},
-	  pages     = {134--142},
-	  url       = {http://www.aclweb.org/anthology/K17-3014}
-	}
-
-	% GENIA
-	@article{btg1023,
-	author = {Kim, J.-D. and Ohta, T. and Tateisi, Y. and Tsujii, J.},
-	title = {{GENIA corpus---a semantically annotated corpus for bio-textmining}},
-	journal = {Bioinformatics},
-	volume = {19},
-	pages = {i180-i182},
-	year = {2003}
-	}
-
-	% CRAFT
-	@Article{Verspoor2012,
-	author="Verspoor, Karin and Cohen, Kevin Bretonnel and Lanfranchi, Arrick and Warner, Colin and Johnson, Helen L. and Roeder, Christophe and Choi, Jinho D. and Funk, Christopher and Malenkiy, Yuriy and Eckert, Miriam and Xue, Nianwen and Baumgartner, William A. and Bada, Michael and Palmer, Martha and Hunter, Lawrence E.",
-	title="A corpus of full-text journal articles is a robust evaluation tool for revealing differences in performance of biomedical natural language processing tools",
-	journal="BMC Bioinformatics",
-	year="2012",
-	volume="13",
-	number="1",
-	pages="207"
-	}
+See [https://github.com/datquocnguyen/jPTDP](https://github.com/datquocnguyen/jPTDP) for details. More documentation to come!
