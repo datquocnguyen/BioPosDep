@@ -15,7 +15,7 @@ Our pre-trained models are **free** for non-commercial use and distributed under
 
 # Usage 
 
-The first step is to perform POS tagging and dependency parsing using pre-trained [NLP4J](https://emorynlp.github.io/nlp4j/) models. Then other pre-trained dependency parsing models might be applied on top of the output of NLP4J. 
+The first step is to perform POS tagging and dependency parsing using pre-trained [NLP4J](https://emorynlp.github.io/nlp4j/) models. Here, NLP4J would also perform _tokenization_ and _sentence segmentation_ if input files are raw text corpora. Then other pre-trained dependency parsing models might be applied on top of the output of NLP4J. 
 
 ### Perform biomedical POS tagging and dependency parsing using pre-trained NLP4J models 
 
@@ -70,7 +70,7 @@ To run the models, it is expected that `Java` is already set to run in command l
 From the examples above, output files `.genia` and `.craft ` are generated in folder `data`, containing POS and dependency annotations.  
 
 
-##### Note
+##### NOTE
 Those NLP4J output files are in a 9-column format. To further apply other pre-trained dependency parsing models, they must be converted to 10-column format:
 
 	# Command line
@@ -121,4 +121,6 @@ Two output  parsed files `raw.txt.genia.conll` and `raw.txt.craft.conll` are gen
 	
 ### Using pre-trained jPTDP models 
 
-See [https://github.com/datquocnguyen/jPTDP](https://github.com/datquocnguyen/jPTDP) for details. More documentation to come!
+See [https://github.com/datquocnguyen/jPTDP](https://github.com/datquocnguyen/jPTDP) for details. 
+
+More documentation to come!
