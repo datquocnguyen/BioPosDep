@@ -1,7 +1,7 @@
 
 # Pre-trained models for biomedical POS tagging and dependency parsing
 
-Pre-trained models for biomedical POS tagging and dependency parsing are trained on  [GENIA](http://www.geniaproject.org/) and [CRAFT](http://BioPosDep-corpora.sourceforge.net/CRAFT/). See our following paper for more details:
+Pre-trained models for biomedical POS tagging and dependency parsing are trained on  [GENIA](http://www.geniaproject.org/) and [CRAFT](http://BioPosDep-corpora.sourceforge.net/CRAFT/). See [our following paper](https://doi.org/10.1186/s12859-019-2604-0) for more details:
 
 	@Article{NguyenK2019,
 	author="Nguyen, Dat Quoc and Verspoor, Karin",
@@ -19,9 +19,11 @@ Pre-trained models for biomedical POS tagging and dependency parsing are trained
     
 Our pre-trained models are **free** for non-commercial use and distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International ([CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/)) License. 
 
+<img width="400" alt="pos" src="https://user-images.githubusercontent.com/2412555/53179172-c9de7500-3625-11e9-90ac-17fe3ca016b0.png"> <img width="400" alt="dep" src="https://user-images.githubusercontent.com/2412555/53179163-c6e38480-3625-11e9-954d-9676730e7b27.png">
+
 # Usage 
 
-The first step is to perform POS tagging and dependency parsing using pre-trained [NLP4J](https://emorynlp.github.io/nlp4j/) models. Here, NLP4J would also perform _tokenization_ and _sentence segmentation_ if input files are raw text corpora. Then other pre-trained dependency parsing models might be applied on top of the output of NLP4J. 
+#### The first step is to perform POS tagging and dependency parsing using pre-trained [NLP4J](https://emorynlp.github.io/nlp4j/) models. Here, NLP4J would also perform _TOKENIZATION_ and _SENTENCE SEGMENTATION_ if input files are raw text corpora. Then other pre-trained dependency parsing models might be applied on top of the output of NLP4J. 
 
 ### Perform biomedical POS tagging and dependency parsing using pre-trained NLP4J models 
 
