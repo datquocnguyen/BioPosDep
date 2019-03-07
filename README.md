@@ -117,6 +117,7 @@ Those NLP4J output files are in a 9-column format. To further apply other depend
 	BioPosDep/StanfordBiaffineParser-v2$ python main.py --save_dir models/CRAFT parse <input_file_path>
 
 	# Output parsed files are by default saved in the model directory with the same name as the input file.
+	# NOTE: We can also specify the output directory with the --output_dir flag and/or the output file name with the --output_file flag.
 
 #### Examples
 
